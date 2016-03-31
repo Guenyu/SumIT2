@@ -8,6 +8,6 @@
 </head>
 <body>
 <body>
-일정 Test
+일정 Test2
 </body>
 </html>
