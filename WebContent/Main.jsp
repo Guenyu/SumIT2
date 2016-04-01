@@ -8,7 +8,7 @@
 
 </head>
 <body>
-<form action="mypage.html">
+<form action="Mypage.html">
 <input type="submit" value="Mypage.jsp">
 </form>
 </body>
