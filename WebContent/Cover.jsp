@@ -11,11 +11,8 @@
 <div id="Menu1">
 <img alt="" src="images/CheckMatelogo.png" width="200" height="200">
 </div>
-<div id="Menu2">
-<table>
-<tr><td align="center" colspan="2"><button onclick="location.href='LoginForm.jsp'">로그인</button></td></tr>
-<tr><td><button onclick="location.href='CreateForm.jsp'">회원가입</button></td></tr>
-</table>
-</div>
+<div id="buttonu195" class="u196-4" onclick="location.href='LoginForm.jsp'">Sign up<br></div>
+<button onclick="location.href='CreateForm.jsp'">회원가입</button>
+
 </body>
 </html>
