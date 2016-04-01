@@ -8,8 +8,8 @@
 
 </head>
 <body>
-<form action="Mypage.html">
-<input type="submit" value="Mypage.jsp">
+<form action="Mypage.jsp">
+<input type="submit" value="Mypage이동">
 </form>
 </body>
 </html>

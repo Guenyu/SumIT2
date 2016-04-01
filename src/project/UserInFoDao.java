@@ -25,19 +25,19 @@ public class UserInFoDao {
 	public int insert(UserInFo user) throws SQLException{
 		int result=0; Connection conn=null;
 		PreparedStatement pstmt=null;
-//		String sql="insert into UserInFo values(?,?,?,?,?,?,?,?)";
-		String sql="insert into UserInFo values(?,?,?,?)";
+		String sql="insert into UserInFo values(?,?,?,?,?,?,?,?)";
+
 		try {
 			conn=getConnection();
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setString(1, user.getEmail());
 			pstmt.setString(2, user.getPassword());
 			pstmt.setString(3, user.getName());
-//			pstmt.setString(4, user.getAge());
-//			pstmt.setString(5, user.getId());
-//			pstmt.setString(6, user.getAddr());
+			pstmt.setString(4, user.getAge());
+			pstmt.setString(5, user.getId());
+			pstmt.setString(6, user.getAddr());
 			pstmt.setString(7, user.getPhone());
-//			pstmt.setString(8, user.getGender());
+			pstmt.setString(8, user.getGender());
 			result=pstmt.executeUpdate();
 			
 		} catch (Exception e) {
