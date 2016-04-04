@@ -7,12 +7,21 @@
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="comm.css">
 </head>
-<body>
-<div id="Menu1">
+<body bgcolor="gray">
+<!-- <div id="Menu1">
 <img alt="" src="images/CheckMatelogo.png" width="200" height="200">
+</div> -->
+<p id="u199-4">Check-Mate</p>
+<div id="u197-9">
+<p>CHECK-MATE is a real time To-Do list what is based on SNS.</p>
+<p>Group up and meets up together with our AWESOME service!<p>
+<p id="u197-5">&nbsp;</p>
+<p id="u197-7">Present by team SUMIT</p>
 </div>
-<div id="buttonu195" class="u196-4" onclick="location.href='LoginForm.jsp'">Sign up<br></div>
-<button onclick="location.href='CreateForm.jsp'">회원가입</button>
-
+<div id="buttonu195" class="u196-4" onclick="location.href='LoginForm.jsp'">Sign in<br></div>
+<div id="buttonu152" class="u153-4" onclick="location.href='CreateForm.jsp'">Sign up</div>
+<div id="u229">
+<img alt="" src="images/SUMMIT1.png" width="100%" height="300">
+</div>
 </body>
 </html>

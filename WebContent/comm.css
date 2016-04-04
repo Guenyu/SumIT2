@@ -11,16 +11,15 @@
 	border-radius: 10px;
 	padding-bottom: 6px;
 	margin-left: 470px;
-	margin-top: 300px;
-	position: relative;
-	
+	margin-top: 100px;
+	position: relative;	
 }
 #buttonu195:hover
 {
 	background-color: #545454;
 	width: 231px;
 	margin-left: 470px;
-	margin-top: 300px;
+	margin-top: 100px;
 }
 
 #buttonu195.ButtonSelected
@@ -71,4 +70,121 @@
 {
 	color: #FFFFFF;
 	visibility: inherit;
+}
+
+#buttonu152
+{
+	z-index: 5;
+	width: 231px;
+	border-color: #787878;
+	background-color: #CACACA;
+	border-radius: 10px;
+	padding-bottom: 7px;
+	margin-left: 470px;
+	margin-top: 10px;
+	position: relative;
+}
+
+#buttonu152:hover
+{
+	background-color: #545454;
+	width: 231px;
+	margin-left: 470px;
+	margin-top: 10px;
+}
+
+#buttonu152.ButtonSelected
+{
+	background-color: #CACACA;
+	width: 231px;
+	min-height: 0px;
+	margin: 4px 0px 0px 365px;
+}
+
+.u153-4
+{
+	z-index: 6;
+	width: 119px;
+	min-height: 23px;
+	background-color: transparent;
+	color: #3C3C3C;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 1px;
+	font-family: cantarell, sans-serif;
+	font-weight: 400;
+	position: relative;
+	margin-right: -10000px;
+	margin-top: 7px;
+	left: 56px;
+}
+
+#buttonu152:hover .u153-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 23px;
+	width: 119px;
+	margin: 7px -10000px 0px 0px;
+}
+
+#buttonu152.ButtonSelected .u153-4
+{
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 23px;
+	width: 119px;
+	margin: 7px -10000px 0px 0px;
+}
+
+#buttonu152:hover .u153-4 p
+{
+	color: #FFFFFF;
+	visibility: inherit;
+}
+#u199-4
+{
+	z-index: 25;
+	width: 311px;
+	min-height: 40px;
+	background-color: transparent;
+	line-height: 48px;
+	text-align: center;
+	font-size: 40px;
+	font-family: codystar, sans-serif;
+	font-weight: 400;
+	margin-left: 478px;
+	margin-top: 180px;
+	position: relative;
+}
+
+#u197-9
+{
+	z-index: 16;
+	width: 781px;
+	min-height: 76px;
+	border-style: none;
+	border-color: transparent;
+	background-color: transparent;
+	text-align: center;
+	color: #FFFFFF;
+	font-family: cantarell, sans-serif;
+	font-weight: 400;
+	margin-left: 250px;
+	margin-top: 9px;
+	position: relative;
+}
+#u197-5,#u197-7
+{
+	font-size: 10px;
+	line-height: 12px;
+}
+#u229
+{
+	z-index: 3;
+	width: 920px;
+	background-color: transparent;
+	margin-left: 150px;
+	margin-top: 2px;
+	position: relative;
 }
