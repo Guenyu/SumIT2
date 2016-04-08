@@ -8,16 +8,13 @@
 </head>
 <body>
 <%  
-	String email=request.getParameter("email");
-	System.out.println("email="+email);
-	String password =request.getParameter("password");
-	System.out.println("password="+password);
+	String email=(String)session.getAttribute("email");
+	String password = request.getParameter("password");
 	UserInFoDao ud = UserInFoDao.getInstance();
-	int result = ud.loginchk(email, password);
-	System.out.println("result="+result);
-	if (result == 1) {
-	   int result2 = ud.delete(password);
-	   if (result2 > 0) {
+	int chk = ud.loginchk(email, password); 
+	if (chk == 1) { 
+	   int result = ud.delete(email);
+	   if (result > 0) {
 	      session.invalidate();
 %>
    <script type="text/javascript">
