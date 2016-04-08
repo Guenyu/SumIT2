@@ -5,10 +5,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-
+<%
+	String email=request.getParameter("email");
+%>
 </head>
 <body>
-<form action="Mypage.jsp">
+<form action="Mypage.jsp?email=<%=email%>">
 <input type="submit" value="Mypage이동">
 </form>
 </body>

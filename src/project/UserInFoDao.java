@@ -46,6 +46,7 @@ public class UserInFoDao {
 			if(pstmt!=null)pstmt.close();
 			if(conn!=null)conn.close();
 		}
+		System.out.println("result="+result);
 		return result;
 	}
 	public int loginchk(String email,String password) {
@@ -147,16 +148,16 @@ public class UserInFoDao {
 		}
 		return result;
 	}
-	public int delete(String email) throws SQLException {
-	      int result = 0;
+	public int delete(String password) throws SQLException {
+	      int result2 = 0;
 	      Connection conn = null;
 	      PreparedStatement pstmt = null;
-	      String sql = "delete from UserInFo where email=?";
+	      String sql = "delete from UserInFo where password=?";
 	      try {
 	         conn = getConnection();
 	         pstmt = conn.prepareStatement(sql);
-	         pstmt.setString(1, email);
-	         result = pstmt.executeUpdate();
+	         pstmt.setString(1, password);
+	         result2 = pstmt.executeUpdate();
 	      } catch (Exception e) {
 	         System.out.println(e.getMessage());
 	      } finally {
@@ -165,6 +166,6 @@ public class UserInFoDao {
 	         if (conn != null)
 	            conn.close();
 	      }
-	      return result;
+	      return result2;
 	   }
 }
