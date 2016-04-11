@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>캘린더 만들기</title>
+<script type="text/javascript">
+	var year = document.getElementById("select_year").innerHTML;
+	var month = document.getElementById("select_month").innerHTML;
+	var date = date.innerHTML;
+	function onload_fn() {
+		calendar(2016, 1);
+	}
+	function getValue(date) {
+		year = document.getElementById("select_year").innerHTML;
+		month = document.getElementById("select_month").innerHTML;
+		date = date.innerHTML;
+		alert(year + '년 ' + month + '월 ' + date + '일 ');
+	}
+	function calendar(year, month) {
+		var tags = "<table cellspacing='0' border='1' onclick='cal();'>";
+		tags += "<tr><th>일</th><th>월</th><th> 화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>";
+		var date = new Date();
+		date.setFullYear(year, month, 1);
+		var day = date.getDay();
+		for (var i = 0; i < day; i++) {
+			tags += '<td></td>';
+		}
+		while (date.getMonth() == month) {
+			if (date.getDate() != 1 && date.getDay() == 0) {
+				tags += '</tr><tr>';
+			}
+			tags += '<td onclick="getValue(this)">' + date.getDate() + '</td>';
+			date.setDate(date.getDate() + 1);
+		}
+		var days = date.getDay();
+		if (days != 0) {
+			var last = 6 - days + 1;
+			for (var i = 0; i < last; i++) {
+				tags += '<td></td>';
+			}
+		}
+		tags += '</tr></table>';
+		var c = document.getElementById("test");
+		c.innerHTML = tags;
+	}
+	function before_month() {
+		var year = window.document.getElementById("select_year");
+		var month = window.document.getElementById("select_month");
+		if (month.innerHTML == 1) {
+			month.innerHTML = 12;
+			year.innerHTML = parseInt(year.innerHTML) - 1;
+		} else {
+			month.innerHTML = parseInt(month.innerHTML) - 1;
+		}
+		calendar(year.innerHTML, parseInt(month.innerHTML) - 1);
+	}
+	function after_month() {
+		var year = window.document.getElementById("select_year");
+		var month = window.document.getElementById("select_month");
+		if (month.innerHTML == 12) {
+			month.innerHTML = 1;
+			year.innerHTML = parseInt(year.innerHTML) + 1;
+		} else {
+			month.innerHTML = parseInt(month.innerHTML) + 1;
+		}
+		calendar(year.innerHTML, parseInt(month.innerHTML) - 1);
+	}
+	function HideLeftMenu() {
+		if (document.getElementById("leftmenutd").style.display == "none") {
+			document.getElementById("leftmenutd").style.display = "block";
+			document.getElementById("leftmenubartd").innerText = "◀";
+		}else{
+			document.getElementById("leftmenutd").style.display = "none";
+			document.getElementById("leftmenubartd").innerText = "▶";
+		}
+	}
+</script>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="overflow-y: auto;">
+	<table width="100%" height="100%" border="1" cellspacing="0" cellpadding="0">
+		<tr height="50" align="center">
+			<td style="font-size: 16; font-weight: bold; padding-left: 10;" align="left">
+				???님 환영합니다. 
+				<input type="button" name="logout" value="로그아웃"> 
+				<input type="text" style="width: 120; height: 20; border: 1px solid #aaaaaa;">
+				<input type="button" name="검색" value="검색">
+			</td>
+		</tr>
+		<tr align="center">
+			<td>
+				<table width="100%" height="100%" border="1" cellspacing="0" cellpadding="0">
+					<tr align="center">
+						<td width="190" height="50" valign="top" id="leftmenutd" style="display: block;" >
+							<input type="submit" name="일정" value="일정쓰기" >
+							<input type="submit" name="페이지" value="마이페이지"><p>
+							<div align="center">
+								<span onclick="before_month();">◀</span>
+								<span id="select_year">2016</span>년
+								<span id="select_month">1</span> 월
+								<span onclick="after_month();">▶</span><p>
+								<div id='test'></div>
+							</div>
+						</td>
+						<td width="10" style="font-family: tahoma; font-size: 18; border-left: 1px solid #cccccc; border-right: 1px solid #cccccc; cursor: hand;"
+							id="leftmenubartd" onclick="HideLeftMenu();" onmouseover="this.style.backgroundColor='#dddddd';"
+							onmouseout="this.style.backgroundColor='';">◀
+						</td>
+						<td>
+							<!-- jsp메인 달력 들어올 예정 -->
+							<input type="button" name="calendar" value="확인" onclick="location.href='calendar2-1.jsp'"></input>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr height="20" align="center">
+			<td style="border-top: 1px solid #cccccc; font-weight: bold;">
+				 <b>check - make</b> 
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
