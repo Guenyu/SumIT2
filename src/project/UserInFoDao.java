@@ -46,7 +46,6 @@ public class UserInFoDao {
 			if(pstmt!=null)pstmt.close();
 			if(conn!=null)conn.close();
 		}
-		System.out.println("result="+result);
 		return result;
 	}
 	public int loginchk(String email,String password) {
@@ -75,7 +74,6 @@ public class UserInFoDao {
 		return result;
 	}
 	public UserInFo select(String email) {
-		System.out.println("email = "+email);
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
