@@ -26,8 +26,6 @@
 %>
 <style type="text/css">
 * { padding: 0px; margin: 0px; } /* 브라우저별 기본 여백 차이가 있기에 작성한다. */
-body { font-size: 9pt; }
-td { font-size: 9pt;}
 a {
 	cusor: pointer;
 	color: #000000;
@@ -124,9 +122,8 @@ a:HOVER, a:ACTIVE {
 				<table width="100%" border="1" cellspacing="0" cellpadding="0">
 					<tr>
 						<td width="15%" valign="top" id="leftmenutd" align="center">
-							<input type="submit" name="일정" value="일정쓰기"> <input
-							type="submit" name="페이지" value="마이페이지">
-						<p>
+							<input type="submit" name="일정" value="일정쓰기">
+							<input type="button" name="페이지" value="마이페이지" onclick="location.href='Mypage.jsp?email=<%=email%>'"><p>
 							<div>
 								<span onclick="before_month();">◀</span> <span id="select_year">2016</span>년
 								<span id="select_month">1</span> 월 <span
@@ -141,10 +138,10 @@ a:HOVER, a:ACTIVE {
 							<center>
 								<table width="210" border="0" cellpadding="1" cellspacing="2">
 									<tr height="30">
-										<td align="center"><a
-											href="Test2.jsp?year=<%=year%>&month=<%=month - 1%>">◀</a> <b><%=year%>年
-												<%=month%>月</b> <a
-											href="Test2.jsp?year=<%=year%>&month=<%=month + 1%>">▶</a></td>
+										<td align="center">
+										<a href="Main.jsp?year=<%=year%>&month=<%=month - 1%>">◀</a>
+										<b><%=year%>年  <%=month%>月</b>
+										<a href="Main.jsp?year=<%=year%>&month=<%=month + 1%>">▶</a></td>
 									</tr>
 								</table>
 
