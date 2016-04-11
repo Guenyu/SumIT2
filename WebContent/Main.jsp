@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -55,7 +56,7 @@ a:HOVER, a:ACTIVE {
 		alert(year + '년 ' + month + '월 ' + date + '일 ');
 	}
 	function calendar(year, month) {
-		var tags = "<table cellspacing='0' border='1' onclick='cal();'>";
+		var tags = "<table cellspacing='0' border='1' onclick='cal();' style='cursor:pointer'>";
 		tags += "<tr><th>일</th><th>월</th><th> 화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>";
 		var date = new Date();
 		date.setFullYear(year, month, 1);
@@ -123,11 +124,12 @@ a:HOVER, a:ACTIVE {
 					<tr>
 						<td width="15%" valign="top" id="leftmenutd" align="center">
 							<input type="submit" name="일정" value="일정쓰기">
-							<input type="button" name="페이지" value="마이페이지" onclick="location.href='Mypage.jsp?email=<%=email%>'"><p>
-							<div>
-								<span onclick="before_month();">◀</span> <span id="select_year">2016</span>년
-								<span id="select_month">1</span> 월 <span
-									onclick="after_month();">▶</span>
+							<input type="button" name="페이지" value="마이페이지" onclick="location.href='Mypage.jsp?email=<%=email%>'"><br><br>
+							<div style='cursor:pointer'>
+								<span onclick="before_month();">◀</span>
+								<span id="select_year">2016</span>년
+								<span id="select_month">1</span> 월 
+								<span onclick="after_month();">▶</span>
 								<p>
 								<div id='test'></div>
 							</div>
@@ -140,13 +142,13 @@ a:HOVER, a:ACTIVE {
 									<tr height="30">
 										<td align="center">
 										<a href="Main.jsp?year=<%=year%>&month=<%=month - 1%>">◀</a>
-										<b><%=year%>年  <%=month%>月</b>
+										<b><%=year%>년  <%=month%>월</b>
 										<a href="Main.jsp?year=<%=year%>&month=<%=month + 1%>">▶</a></td>
 									</tr>
 								</table>
 
 								<table width="210" border="0" cellpadding="2" cellspacing="1"
-									bgcolor="#cccccc">
+									bgcolor="#cccccc" style='cursor:pointer'>
 									<tr height="25">
 										<td align="center" bgcolor="#e6e4e6"><font color="red">일</font></td>
 										<td align="center" bgcolor="#e6e4e6">월</td>
