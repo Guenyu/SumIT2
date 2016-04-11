@@ -143,7 +143,6 @@ a:HOVER, a:ACTIVE {
 						</td>
 					</tr>
 					</td>
-
 				</table>
 		</tr>
 	</table>

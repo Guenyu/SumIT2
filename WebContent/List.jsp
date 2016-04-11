@@ -70,7 +70,6 @@ a:HOVER, a:ACTIVE {
 				<table width="20%" height="100%" cellspacing="0" cellpadding="0"
 					border="1">
 					<tr>
-
 						<td>
 							<!--전체적인 달력 테이블  -->
 							<table width="100%" height="100%">
