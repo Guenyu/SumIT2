@@ -110,7 +110,7 @@ a:HOVER, a:ACTIVE {
 											fc = (newLine == 0) ? "red" : (newLine == 6 ? "blue" : "#000000");
 											bg = "#ffffff";
 											out.println("<td align='center' bgcolor=" + bg + "><font color=" + fc + ">"
-													+ "<div onclick=location.href='List.jsp?date=" + date + "'>" + date + "</div></font></td>");
+													+ "<div onclick=location.href='List2.jsp?date=" + date + "'>" + date + "</div></font></td>");
 											newLine++;
 											if (newLine == 7 && date != end) {
 												out.println("</tr>");
