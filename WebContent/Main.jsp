@@ -141,9 +141,9 @@ a:HOVER, a:ACTIVE {
 								<table width="210" border="0" cellpadding="1" cellspacing="2">
 									<tr height="30">
 										<td align="center">
-										<a href="Main.jsp?year=<%=year%>&month=<%=month - 1%>">◀</a>
+										<a href="Main.jsp?year=<%=year%>&month=<%=month - 1%>&email=<%=email %>">◀</a>
 										<b><%=year%>년  <%=month%>월</b>
-										<a href="Main.jsp?year=<%=year%>&month=<%=month + 1%>">▶</a></td>
+										<a href="Main.jsp?year=<%=year%>&month=<%=month + 1%>&email=<%=email %>">▶</a></td>
 									</tr>
 								</table>
 
