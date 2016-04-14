@@ -2,7 +2,7 @@ package project;
 
 import java.sql.Date;
 
-public class schedule {
+public class Schedule {
 	private String writer; 
 	private String content;
 	private String title;

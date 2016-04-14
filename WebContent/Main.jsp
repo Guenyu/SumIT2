@@ -135,7 +135,7 @@ a:HOVER, a:ACTIVE {
 							</div>
 						</td>
 						<td width="85%">
-							<!-- jsp메인 달력 들어올 예정 --> <br />&nbsp;<br />
+							<br />&nbsp;<br />
 
 							<center>
 								<table width="210" border="0" cellpadding="1" cellspacing="2">
@@ -159,6 +159,8 @@ a:HOVER, a:ACTIVE {
 										<td align="center" bgcolor="#e6e4e6"><font color="blue">토</font></td>
 									</tr>
 									<%
+										String getData = "02,07,21,29";	
+									
 										int newLine = 0;
 										//1일이 어느 요일에서 시작하느냐에 따른 빈칸 삽입
 										out.println("<tr height='25'>");
@@ -167,12 +169,24 @@ a:HOVER, a:ACTIVE {
 											newLine++;
 										}
 
-										String fc, bg;
+										String fc, bg, cg;
+										String checkDay = "";
 										for (int i = 1; i <= end; i++) {
 
 											fc = (newLine == 0) ? "red" : (newLine == 6 ? "blue" : "#000000");
 											bg = "#ffffff";
-											out.println("<td align='center' bgcolor=" + bg + "><font color=" + fc + ">" + i + "</font></td>");
+											cg = "#B2CCFF";
+											
+											if(i < 10){
+												checkDay = "0" + i;
+											}else {
+												checkDay = Integer.toString(i);
+											}
+											if(getData.indexOf(checkDay)> -1){
+												out.println("<td align='center' bgcolor=" + cg + "><font color=" + fc + ">" + i + "</font></td>");
+											}else {
+												out.println("<td align='center' bgcolor=" + bg + "><font color=" + fc + ">" + i + "</font></td>");
+											}
 											newLine++;
 											if (newLine == 7 && i != end) {
 												out.println("</tr>");
