@@ -160,7 +160,7 @@ a:HOVER, a:ACTIVE {
 									</tr>
 									<%
 										String getData = "02,07,21,29";	
-									
+							
 										int newLine = 0;
 										//1일이 어느 요일에서 시작하느냐에 따른 빈칸 삽입
 										out.println("<tr height='25'>");
