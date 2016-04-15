@@ -73,11 +73,11 @@ a:HOVER, a:ACTIVE {
 			<td width="80%" rowspan="2">
 				<table>
 					<tr>
-						<td><%=seq%></td>
-						<td><%=title%></td>
-						<td><%=content%></td>
-						<td><%=writer%></td>
-						<td><%=reg_date1%>~<%=reg_date2%></td>
+						<td>번호 :<%=seq%></td><p>
+						<td>제목 :<%=title%></td><p>
+						<td>내용 :<%=content%></td><p>
+						<td>작성자 :<%=writer%></td><p>
+						<td>일정 :<%=reg_date1%>~<%=reg_date2%></td>
 					</tr>
 				</table>
 			</td>
