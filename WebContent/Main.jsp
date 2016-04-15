@@ -160,8 +160,13 @@ a:HOVER, a:ACTIVE {
 										<td align="center" bgcolor="#e6e4e6"><font color="blue">토</font></td>
 									</tr>
 									<%
+<<<<<<< HEAD
 										String getData = "02,07,21,29";
 
+=======
+										String getData = "02,07,21,29";	
+							
+>>>>>>> 06d0f4aa60f466d022161ac2935a1771685b021e
 										int newLine = 0;
 										//1일이 어느 요일에서 시작하느냐에 따른 빈칸 삽입
 										out.println("<tr height='25'>");
