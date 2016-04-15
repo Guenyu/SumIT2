@@ -36,7 +36,7 @@ a:HOVER, a:ACTIVE {
 </style>
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0"
-	style="overflow-y: auto;">
+	style="overflow-y: auto;" bgcolor="gray">
 	<%@ page contentType="text/html; charset=UTF-8"%>
 	<%
 		request.setCharacterEncoding("utf-8");
@@ -54,21 +54,24 @@ a:HOVER, a:ACTIVE {
 		month = now.get(Calendar.MONTH) + 1;
 		int end = now.getActualMaximum(Calendar.DAY_OF_MONTH); //해당월의 마지막 날짜
 		int w = now.get(Calendar.DAY_OF_WEEK); //1~7(일~토)
-		int date = 0;
+		String date=request.getParameter("date");
 	%>
 	<table width="100%" height="100%" border="1" cellspacing="0"
-		cellpadding="0" bgcolor="gray">
+		cellpadding="0">
 		<!--전체 테이블 시작  -->
 		<tr height="70" align="center">
 			<td colspan="2">헤더 영역</td>
 		</tr>
 		<tr>
-			<!-- 오른쪽 -->
-			<td width="80%" rowspan="2">아오 </td>
-			<td align="center">
+		<!--오른쪽  -->
+		<td width="80%" rowspan="2">
+			<table>
+				<tr><td>agadg</td></tr>
+			</table>
+		</td>
+			<td>
 				<!--왼쪽  -->
-				<table width="20%" height="100%" cellspacing="0" cellpadding="0"
-					border="1">
+				<table width="20%" height="100%" cellspacing="0" cellpadding="0">
 					<tr>
 						<td>
 							<!--전체적인 달력 테이블  -->
@@ -76,13 +79,14 @@ a:HOVER, a:ACTIVE {
 								<!--년/달  -->
 								<table width="210" border="0" cellpadding="1" cellspacing="2">
 									<tr height="30">
-										<td align="center">
-										<a href="List.jsp?year=<%=year%>&month=<%=month - 1%>">◀</a>
-										<b><%=year%> 年  <%=month%>月</b>
-										<a href="List.jsp?year=<%=year%>&month=<%=month + 1%>">▶</a></td>
+										<td align="center"><a
+											href="List.jsp?year=<%=year%>&month=<%=month - 1%>">◀</a> <b><%=year%>年
+												<%=month%>月</b> <a
+											href="List.jsp?year=<%=year%>&month=<%=month + 1%>">▶</a></td>
 										<td><button onclick="location.href='List.jsp'">today</button></td>
 									</tr>
 								</table>
+
 								<!--월~금,날짜 -->
 								<table width="210" border="0" cellpadding="2" cellspacing="1"
 									bgcolor="#cccccc">
@@ -105,14 +109,15 @@ a:HOVER, a:ACTIVE {
 										}
 
 										String fc, bg;
-										for (date = 1; date <= end; date++) {
-
+										for (int i= 1; i <= end; i++) {
 											fc = (newLine == 0) ? "red" : (newLine == 6 ? "blue" : "#000000");
 											bg = "#ffffff";
-											out.println("<td align='center' bgcolor=" + bg + "><font color=" + fc + ">"
-													+ "<div onclick=location.href='List2.jsp?date=" + date + "'>" + date + "</div></font></td>");
+								
+											out.println("<td align='center' bgcolor=" + bg +"><font color=" + fc + ">" +
+												"<div onclick=location.href='List.jsp?date="+ i + "'>"+i+"</div></font></td>");
+											
 											newLine++;
-											if (newLine == 7 && date != end) {
+											if (newLine == 7 && i != end) {
 												out.println("</tr>");
 												out.println("<tr height='25'>");
 												newLine = 0;
@@ -127,6 +132,7 @@ a:HOVER, a:ACTIVE {
 								</table>
 							</table>
 						</td>
+						
 					<tr height="80">
 						<td><img alt="" src="images/jin2.jpg" width="100%" height="400">
 						</td>

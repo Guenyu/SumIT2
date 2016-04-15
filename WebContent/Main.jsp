@@ -24,6 +24,7 @@
 	int end = now.getActualMaximum(Calendar.DAY_OF_MONTH); //해당월의 마지막 날짜
 	int w = now.get(Calendar.DAY_OF_WEEK); //1~7(일~토)
 	String email=request.getParameter("email");
+	int date = 0;
 %>
 <style type="text/css">
 * { padding: 0px; margin: 0px; } /* 브라우저별 기본 여백 차이가 있기에 작성한다. */
@@ -123,7 +124,7 @@ a:HOVER, a:ACTIVE {
 				<table width="100%" border="1" cellspacing="0" cellpadding="0">
 					<tr>
 						<td width="15%" valign="top" id="leftmenutd" align="center">
-							<input type="submit" name="일정" value="일정쓰기">
+							<input type="submit" name="일정" value="일정쓰기" onclick="location.href='WriteForm.jsp?email=<%=email%>'">
 							<input type="button" name="페이지" value="마이페이지" onclick="location.href='Mypage.jsp?email=<%=email%>'"><br><br>
 							<div style='cursor:pointer'>
 								<span onclick="before_month();">◀</span>
@@ -159,8 +160,8 @@ a:HOVER, a:ACTIVE {
 										<td align="center" bgcolor="#e6e4e6"><font color="blue">토</font></td>
 									</tr>
 									<%
-										String getData = "02,07,21,29";	
-									
+										String getData = "02,07,21,29";
+
 										int newLine = 0;
 										//1일이 어느 요일에서 시작하느냐에 따른 빈칸 삽입
 										out.println("<tr height='25'>");
@@ -171,36 +172,45 @@ a:HOVER, a:ACTIVE {
 
 										String fc, bg, cg;
 										String checkDay = "";
-										for (int i = 1; i <= end; i++) {
+										for (date = 1; date <= end; date++) {
 
 											fc = (newLine == 0) ? "red" : (newLine == 6 ? "blue" : "#000000");
 											bg = "#ffffff";
 											cg = "#B2CCFF";
-											
-											if(i < 10){
-												checkDay = "0" + i;
-											}else {
-												checkDay = Integer.toString(i);
-											}
-											if(getData.indexOf(checkDay)> -1){
-												out.println("<td align='center' bgcolor=" + cg + "><font color=" + fc + ">" + i + "</font></td>");
-											}else {
-												out.println("<td align='center' bgcolor=" + bg + "><font color=" + fc + ">" + i + "</font></td>");
-											}
-											newLine++;
-											if (newLine == 7 && i != end) {
-												out.println("</tr>");
-												out.println("<tr height='25'>");
-												newLine = 0;
-											}
-										}
 
-										while (newLine > 0 && newLine < 7) {
-											out.println("<td bgcolor='ffffff'>&nbsp;</td>");
-											newLine++;
-										}
-										out.println("</tr>");
+											if (date < 10) {
+												checkDay = "0" + date;
+											} else {
+												checkDay = Integer.toString(date);
+											}
+											if (getData.indexOf(checkDay) > -1) {
 									%>
+									<td align='center' bgcolor="#B2CCFF"
+										onclick="location.href='WriteForm2.jsp?year=<%=year%>&month=<%=month%>&date=<%=date%>'">
+										<%
+											out.println("<font color=" + fc + ">" + date + "</font></td>");
+												} else {
+										%>
+									
+									<td align='center' bgcolor=" #ffffff "
+										onclick="location.href='WriteForm2.jsp?year=<%=year%>&month=<%=month%>&date=<%=date%>'">
+										<%
+											out.println("<font color=" + fc + ">" + date + "</font></td>");
+												}
+												newLine++;
+												if (newLine == 7 && date != end) {
+													out.println("</tr>");
+													out.println("<tr height='25'>");
+													newLine = 0;
+												}
+											}
+
+											while (newLine > 0 && newLine < 7) {
+												out.println("<td bgcolor='ffffff'>&nbsp;</td>");
+												newLine++;
+											}
+											out.println("</tr>");
+										%>
 								</table>
 							</center>
 						</td>
