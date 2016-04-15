@@ -7,7 +7,21 @@ public class Schedule {
 	private String content;
 	private String title;
 	private int seq; 
-	private Date reg_date;
+	private Date reg_date1;
+	private Date reg_date2;
+	
+	public Date getReg_date1() {
+		return reg_date1;
+	}
+	public void setReg_date1(Date reg_date1) {
+		this.reg_date1 = reg_date1;
+	}
+	public Date getReg_date2() {
+		return reg_date2;
+	}
+	public void setReg_date2(Date reg_date2) {
+		this.reg_date2 = reg_date2;
+	}
 	public String getWriter() {
 		return writer;
 	}
@@ -32,11 +46,4 @@ public class Schedule {
 	public void setSeq(int seq) {
 		this.seq = seq;
 	}
-	public Date getReg_date() {
-		return reg_date;
-	}
-	public void setReg_date(Date reg_date) {
-		this.reg_date = reg_date;
-	}
-	
 }

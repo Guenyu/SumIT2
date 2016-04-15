@@ -4,7 +4,7 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title></head><body>
 <%	request.setCharacterEncoding("utf-8"); %>
-<jsp:useBean id="user" class="project.Schedule"></jsp:useBean>
+<jsp:useBean id="user" class="project.Schedule"/>
 <jsp:setProperty property="*" name="user"/>
 <%	
 	ScheduleDao SDao = ScheduleDao.getInstance();

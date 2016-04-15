@@ -14,25 +14,22 @@
 		
 	%>
 	<form action="WritePro.jsp" method="post">
-		<input type="hidden" name="writer" value="<%=email%>">
-<%-- 		
-		<input type="hidden" name="ref" value="<%=ref%>">
-		<input type="hidden" name="re_step" value="<%=re_step%>">
-		<input type="hidden" name="re_level" value="<%=re_level%>">
-		<input type="hidden" name="pageNum" value="<%=pageNum%>"> --%>
+	<input type="hidden" name="seq" value="<%=seq%>">
 		<table border="1">
 			<caption>일정 작성</caption>
 			<tr>
+				<th>작성자:</th>
+				<td><input type="text" name="writer" required="required" name="writer" value="<%=email%>"></td>
+			</tr>
+			<tr>
 				<th>제목</th>
-				<td><input type="text" name="subject" required="required" name="title"
-					autofocus="autofocus"></td>
+				<td><input type="text" required="required" name="title"></td>
 			</tr>
 			<tr>
 				<th>일정</th>
 				<td>
-				
-				<input type="date" name="Reg_date" required="required">~
-				<input type="date" name="date1" required="required"></td>
+				<input type="date" name="Reg_date1" required="required">~
+				<input type="date" name="Reg_date2" required="required"></td>
 			</tr>
 			<tr>
 				<th>내용</th>

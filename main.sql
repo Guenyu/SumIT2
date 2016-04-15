@@ -14,11 +14,12 @@ drop table UserInFo;
 -----------------------------------------------
 
 create table schedule(
-	writer varchar2(30) primary key,
-	content varchar2(30) not null,
-	title varchar2(15) not null,
 	seq number(10) not null,
-	reg_date date
+	title varchar2(30) not null,
+	content varchar2(100) not null,
+	writer varchar2(30) primary key,
+	reg_date1 date,
+	reg_date2 date
 );
 select * from schedule;
 drop table schedule;
