@@ -28,8 +28,8 @@
 			<tr>
 				<th>일정</th>
 				<td>
-				<input type="date" name="Reg_date1" required="required">~
-				<input type="date" name="Reg_date2" required="required"></td>
+				<input type="date" name="reg_date1" required="required">~
+				<input type="date" name="reg_date2" required="required"></td>
 			</tr>
 			<tr>
 				<th>내용</th>

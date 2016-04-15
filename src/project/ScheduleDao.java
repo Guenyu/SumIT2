@@ -38,8 +38,8 @@ public class ScheduleDao {
 				sd.setTitle(rs.getString("title"));
 				sd.setWriter(rs.getString("writer"));
 				sd.setContent(rs.getString("content"));
-				sd.setReg_date1(rs.getDate("reg_date1"));
-				sd.setReg_date2(rs.getDate("reg_date2"));
+				sd.setReg_date1(rs.getString("reg_date1"));
+				sd.setReg_date2(rs.getString("reg_date2"));
 			}  
 		}catch(Exception e){
 			System.out.println(e.getMessage());
@@ -53,24 +53,17 @@ public class ScheduleDao {
 	public int insert(Schedule user) throws SQLException{
 		int result=0; Connection conn=null;
 		PreparedStatement pstmt=null;
-		//String sql="insert into UserInFo values(?,?,?,?,?,?,?,?)";
 		String sql="insert into Schedule values(?,?,?,?,?,?)";
 		try {
 			conn=getConnection();
 			pstmt=conn.prepareStatement(sql);
 			pstmt.setInt(1,user.getSeq());
 			pstmt.setString(2, user.getTitle());
-			System.out.println("tit="+user.getTitle());
 			pstmt.setString(3, user.getContent());
-			System.out.println("con="+user.getContent());
-//			pstmt.setString(4, user.getAge());
-//			pstmt.setString(5, user.getId());
-//			pstmt.setString(6, user.getAddr());
 			pstmt.setString(4, user.getWriter());
-			
-			pstmt.setDate(5, user.getReg_date1());
+			pstmt.setString(5, user.getReg_date1());
 			System.out.println("date1="+user.getReg_date1());
-			pstmt.setDate(6, user.getReg_date2());
+			pstmt.setString(6, user.getReg_date2());
 			System.out.println("date2="+user.getReg_date2());
 			result=pstmt.executeUpdate();
 			
