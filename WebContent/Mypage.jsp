@@ -56,7 +56,7 @@ a:HOVER, a:ACTIVE {
 		int end = now.getActualMaximum(Calendar.DAY_OF_MONTH); //해당월의 마지막 날짜
 		int w = now.get(Calendar.DAY_OF_WEEK); //1~7(일~토)
 		int date = 0;
-	    String email=request.getParameter("email");
+	    email=request.getParameter("email");
 	%>
 	<table width="100%" height="100%" border="1" cellspacing="0"
 		cellpadding="0" bgcolor="gray">
