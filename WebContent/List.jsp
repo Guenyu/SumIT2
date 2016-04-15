@@ -54,7 +54,13 @@ a:HOVER, a:ACTIVE {
 		month = now.get(Calendar.MONTH) + 1;
 		int end = now.getActualMaximum(Calendar.DAY_OF_MONTH); //해당월의 마지막 날짜
 		int w = now.get(Calendar.DAY_OF_WEEK); //1~7(일~토)
-		String date=request.getParameter("date");
+		String date = request.getParameter("date");
+		String seq = request.getParameter("seq");
+		String writer = request.getParameter("writer");
+		String content = request.getParameter("content");
+		String title = request.getParameter("title");
+		String reg_date1 = request.getParameter("reg_date1");
+		String reg_date2 = request.getParameter("reg_date2");
 	%>
 	<table width="100%" height="100%" border="1" cellspacing="0"
 		cellpadding="0">
@@ -63,12 +69,18 @@ a:HOVER, a:ACTIVE {
 			<td colspan="2">헤더 영역</td>
 		</tr>
 		<tr>
-		<!--오른쪽  -->
-		<td width="80%" rowspan="2">
-			<table>
-				<tr><td>agadg</td></tr>
-			</table>
-		</td>
+			<!--오른쪽  -->
+			<td width="80%" rowspan="2">
+				<table>
+					<tr>
+						<td><%=seq%></td>
+						<td><%=title%></td>
+						<td><%=content%></td>
+						<td><%=writer%></td>
+						<td><%=reg_date1%>~<%=reg_date2%></td>
+					</tr>
+				</table>
+			</td>
 			<td>
 				<!--왼쪽  -->
 				<table width="20%" height="100%" cellspacing="0" cellpadding="0">
@@ -109,13 +121,13 @@ a:HOVER, a:ACTIVE {
 										}
 
 										String fc, bg;
-										for (int i= 1; i <= end; i++) {
+										for (int i = 1; i <= end; i++) {
 											fc = (newLine == 0) ? "red" : (newLine == 6 ? "blue" : "#000000");
 											bg = "#ffffff";
-								
-											out.println("<td align='center' bgcolor=" + bg +"><font color=" + fc + ">" +
-												"<div onclick=location.href='List.jsp?date="+ i + "'>"+i+"</div></font></td>");
-											
+
+											out.println("<td align='center' bgcolor=" + bg + "><font color=" + fc + ">"
+													+ "<div onclick=location.href='List.jsp?date=" + i + "'>" + i + "</div></font></td>");
+
 											newLine++;
 											if (newLine == 7 && i != end) {
 												out.println("</tr>");
@@ -132,10 +144,9 @@ a:HOVER, a:ACTIVE {
 								</table>
 							</table>
 						</td>
-						
 					<tr height="80">
-						<td><img alt="" src="images/jin2.jpg" width="100%" height="400">
-						</td>
+						<td><img alt="" src="images/jin2.jpg" width="100%"
+							height="400"></td>
 					</tr>
 					</td>
 				</table>

@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="comm.css">
 </head>
 <body>
-	<%	int seq=1;
+	<%	int seq=3;
 		String email = request.getParameter("email");
 		String year = request.getParameter("year");
 		

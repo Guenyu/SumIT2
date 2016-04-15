@@ -9,8 +9,14 @@
 <%	
 	ScheduleDao SDao = ScheduleDao.getInstance();
 	int result = SDao.insert(user);
-	if (result >0) response.sendRedirect("List.jsp");
-	else { %>
+	if (result >0) {
+	%>
+	<script type="text/javascript">
+		location.href="List.jsp?seq=<%=user.getSeq()%>&title=<%=user.getTitle()%>"
+		+"&content=<%=user.getContent()%>&writer=<%=user.getWriter()%>"
+		+"&reg_date1=<%=user.getReg_date1()%>&reg_date2=<%=user.getReg_date2()%>"
+	</script>
+	<% } else { %>
 <script type="text/javascript">
 	alert("잘해 !");  history.go(-1);
 </script>

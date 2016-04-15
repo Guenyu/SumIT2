@@ -62,9 +62,7 @@ public class ScheduleDao {
 			pstmt.setString(3, user.getContent());
 			pstmt.setString(4, user.getWriter());
 			pstmt.setString(5, user.getReg_date1());
-			System.out.println("date1="+user.getReg_date1());
 			pstmt.setString(6, user.getReg_date2());
-			System.out.println("date2="+user.getReg_date2());
 			result=pstmt.executeUpdate();
 			
 		} catch (Exception e) {
