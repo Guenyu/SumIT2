@@ -1,6 +1,6 @@
 <%
-	String id = (String)session.getAttribute("id");
-	if (id == null || id == "") {
+	String email = (String)session.getAttribute("email");
+	if (email == null || email == "") {
 		response.sendRedirect("LoginForm.jsp");
 	}
 %>
