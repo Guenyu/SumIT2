@@ -11,7 +11,7 @@
 <body>
 	<%
 		int num = 0, ref = 0, re_step = 0, re_level = 0;
-		String email = request.getParameter("email");
+		email = request.getParameter("email");
 		String year = request.getParameter("year");
 		String month = request.getParameter("month");
 		String date = request.getParameter("date");
