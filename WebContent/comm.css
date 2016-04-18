@@ -33,29 +33,36 @@
 }
 
 #buttonu195 {
+	align: center;
+	margin: 7px auto;
 	z-index: 11;
 	width: 231px;
 	border-color: #787878;
 	background-color: #CACACA;
 	border-radius: 10px;
 	padding-bottom: 6px;
-	margin-left: 470px;
-	margin-top: 100px;
+	/* margin-left: 470px;
+	margin-top: 100px; */
 	position: relative;
+	z-index: 11;
 }
 
 #buttonu195:hover {
 	background-color: #545454;
 	width: 231px;
-	margin-left: 470px;
-	margin-top: 100px;
+	/* 	margin-left: 470px;
+	margin-top: 100px; */
+	align: center;
+	margin: 7px auto;
 }
 
 #buttonu195.ButtonSelected {
 	background-color: #CACACA;
 	width: 231px;
 	min-height: 0px;
-	margin: 17px 0px 0px 365px;
+	/* margin: 17px 0px 0px 365px; */
+	align: center;
+	margin: 7px auto;
 }
 
 .u196-4 {
@@ -70,9 +77,11 @@
 	font-family: cantarell, sans-serif;
 	font-weight: 400;
 	position: relative;
-	margin-right: -10000px;
+	/* margin-right: -10000px;
 	margin-top: 8px;
-	left: 56px;
+	left: 56px; */
+	align: center;
+	margin: 7px auto;
 }
 
 #buttonu195:hover .u196-4 {
@@ -80,7 +89,9 @@
 	padding-bottom: 0px;
 	min-height: 23px;
 	width: 119px;
-	margin: 8px -10000px 0px 0px;
+	/* margin: 8px -10000px 0px 0px; */
+	margin: 7px auto;
+	align: center;
 }
 
 #buttonu195.ButtonSelected #u196-4 {
@@ -88,12 +99,16 @@
 	padding-bottom: 0px;
 	min-height: 23px;
 	width: 119px;
-	margin: 8px -10000px 0px 0px;
+	/* margin: 8px -10000px 0px 0px; */
+	align: center;
+	margin: 7px auto;
 }
 
 #buttonu195:hover #u196-4 p {
 	color: #FFFFFF;
 	visibility: inherit;
+	margin: 7px auto;
+	align: center;
 }
 
 #buttonu152 {
@@ -103,23 +118,29 @@
 	background-color: #CACACA;
 	border-radius: 10px;
 	padding-bottom: 7px;
-	margin-left: 470px;
-	margin-top: 10px;
+	/* 	margin-left: 470px;
+	margin-top: 10px; */
 	position: relative;
+	align: center;
+	margin: auto;
 }
 
 #buttonu152:hover {
 	background-color: #545454;
 	width: 231px;
-	margin-left: 470px;
-	margin-top: 10px;
+	/* 	margin-left: 470px;
+	margin-top: 10px; */
+	align: center;
+	margin: auto;
 }
 
 #buttonu152.ButtonSelected {
 	background-color: #CACACA;
 	width: 231px;
 	min-height: 0px;
-	margin: 4px 0px 0px 365px;
+	/* 	margin: 4px 0px 0px 365px; */
+	align: center;
+	margin: auto;
 }
 
 .u153-4 {
@@ -134,9 +155,11 @@
 	font-family: cantarell, sans-serif;
 	font-weight: 400;
 	position: relative;
-	margin-right: -10000px;
+	/* margin-right: -10000px;
 	margin-top: 7px;
-	left: 56px;
+	left: 56px; */
+	align: center;
+	margin: auto;
 }
 
 #buttonu152:hover .u153-4 {
@@ -144,7 +167,9 @@
 	padding-bottom: 0px;
 	min-height: 23px;
 	width: 119px;
-	margin: 7px -10000px 0px 0px;
+	/* 	margin: 7px -10000px 0px 0px; */
+	align: center;
+	margin: auto;
 }
 
 #buttonu152.ButtonSelected .u153-4 {
@@ -152,12 +177,16 @@
 	padding-bottom: 0px;
 	min-height: 23px;
 	width: 119px;
-	margin: 7px -10000px 0px 0px;
+	/* 	margin: 7px -10000px 0px 0px; */
+	align: center;
+	margin: auto;
 }
 
 #buttonu152:hover .u153-4 p {
 	color: #FFFFFF;
 	visibility: inherit;
+	align: center;
+	margin: auto;
 }
 
 #u199-4 {
@@ -207,9 +236,12 @@
 
 #u229 {
 	z-index: 3;
-	width: 920px;
+	/* width: 920px; */
 	background-color: transparent;
-	margin-left: 150px;
-	margin-top: 2px;
+	background-size: cover;
+	/* margin-left: 150px;
+	margin-top: 2px; */
 	position: relative;
+	align: center;
+	margin: 20px auto;
 }

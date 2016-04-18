@@ -21,12 +21,12 @@
 	</div>
 	<div id="buttonu195" class="u196-4"
 		onclick="location.href='LoginForm.jsp'">
-		Sign in<br>
+		SIGN IN<br>
 	</div>
 	<div id="buttonu152" class="u153-4"
-		onclick="location.href='CreateForm.jsp'">Sign up</div>
+		onclick="location.href='CreateForm.jsp'">SIGN UP</div>
 	<div id="u229">
-		<img alt="" src="images/SUMMIT1.png" width="100%" height="300">
+		<img alt="" src="images/SUMMIT1.png" width="100%">
 	</div>
 </body>
 </html>
