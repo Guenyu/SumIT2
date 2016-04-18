@@ -5,7 +5,7 @@ public class UserInFo {
 	private String password;
 	private String name;
 //	private String age;
-//	private String id;
+	private String ID;
 //	private String addr;
 	private String phone;
 //	private String gender;
@@ -33,12 +33,12 @@ public class UserInFo {
 //	public void setAge(String age) {
 //		this.age = age;
 //	}
-//	public String getId() {
-//		return id;
-//	}
-//	public void setId(String id) {
-//		this.id = id;
-//	}
+	public String getId() {
+		return ID;
+	}
+	public void setId(String ID) {
+	this.ID = ID;
+}
 //	public String getAddr() {
 //		return addr;
 //	}
@@ -57,5 +57,10 @@ public class UserInFo {
 //	public void setGender(String gender) {
 //		this.gender = gender;
 //	}
+	@Override
+	public String toString() {
+		return "UserInFo [email=" + email + ", password=" + password + ", name=" + name + ", ID=" + ID + ", phone="
+				+ phone + "]";
+	}
 	
 }

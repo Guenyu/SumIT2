@@ -6,8 +6,9 @@
 	left: 550px;
 }
 
-#createForm2 {
-	position: absolute;
+#tableCenter {
+	margin: auto;
+	align: center;
 	top: 300px;
 	left: 510px;
 }
@@ -169,8 +170,9 @@
 	background-color: transparent;
 	line-height: 48px;
 	font-weight: 400;
-	min-height: 40px;
+	/* min-height: 40px; */
 	width: 311px;
+	white-space: normal;
 
 	/* top: 200px;
 	position: absolute;
@@ -182,20 +184,23 @@
 #u197-9 {
 	z-index: 16;
 	width: 781px;
+	text-align: center;
+	margin: auto;
 	min-height: 76px;
 	border-style: none;
 	border-color: transparent;
 	background-color: transparent;
-	text-align: center;
 	color: #FFFFFF;
 	font-family: cantarell, sans-serif;
 	font-weight: 400;
-	margin-left: 250px;
-	margin-top: 9px;
+	/* margin-left: 250px;
+	margin-top: 9px; */
 	position: relative;
 }
 
 #u197-5, #u197-7 {
+	text-align: center;
+	margin: auto;
 	font-size: 10px;
 	line-height: 12px;
 }

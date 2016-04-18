@@ -33,16 +33,19 @@
 			frm.phone.focus();
 			frm.phone.value = "";
 		}
-		 else
-			action = "CreatePro.jsp"
+		frm.action ="CreatePro.jsp";
 	}
-	function Emailcheck() {
-		window.open("Emailcheck.jsp?email=" + frm.email.value, "",
+	function emailcheck() {
+		window.open("emailcheck.jsp?email=" + frm.email.value, "",
 				"width=300 height = 300");
 	}
 	function IDCheck() {
-		window.open("IDCheck.jsp?ID=" + frm.ID.value, "",
-				"width=300 height = 300");
+		if (frm.ID.value == "") {
+			alert("아이디를 입력하세요");
+			frm.ID.focus();
+		}
+		else
+		window.open("IDCheck.jsp?ID=" + frm.ID.value, "","width=300 height = 300");
 	}
 </script>
 </head>
@@ -64,12 +67,12 @@
 		<div id="createForm2">
 			<table>
 				<tr>
-					<td>E-mail</td>
-					<td><input type="email" name="email" required="required"
-						maxlength="30" placeholder="E-Mail"></td>
-					<td>&nbsp; <input type="button" value="Redundancy check"
-						onclick="Emailcheck()" required="required"></td>
-				</tr>
+				<td>E-mail</td>
+				<td><input type="email" name="email" required="required"
+					maxlength="30" placeholder="E-Mail"></td>
+				<td>&nbsp; <input type="button" value="Redundancy check"
+					onclick="emailcheck()" required="required"></td>
+			</tr>
 				<tr>
 					<td>아이디</td>
 					<td><input type="text" name="ID" required="required"
