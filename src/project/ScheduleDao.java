@@ -54,6 +54,7 @@ public class ScheduleDao {
 		int result=0; Connection conn=null;
 		PreparedStatement pstmt=null;
 		String sql="insert into Schedule values(?,?,?,?,?,?)";
+//		String sql="insert into Schedule values((Select seq+1 from(Select seq from Schedule Order By seq Desc)Where RowNum <=1),?,?,?,?,?)";
 		try {
 			conn=getConnection();
 			pstmt=conn.prepareStatement(sql);

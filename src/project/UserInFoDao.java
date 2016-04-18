@@ -30,8 +30,8 @@ public class UserInFoDao {
 		try {
 			conn=getConnection();
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setString(1, user.getName());
-			pstmt.setString(2, user.getEmail());
+			pstmt.setString(1, user.getEmail());
+			pstmt.setString(2, user.getName());
 			pstmt.setString(3, user.getID());
 			pstmt.setString(4, user.getPassword());
 			pstmt.setString(5, user.getPhone());
