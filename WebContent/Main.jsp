@@ -185,14 +185,14 @@ a:HOVER, a:ACTIVE {
 											if (getData.indexOf(checkDay) > -1) {
 									%>
 									<td align='center' bgcolor="#B2CCFF"
-										onclick="location.href='WriteForm2.jsp?year=<%=year%>&month=<%=month%>&date=<%=date%>'">
+										onclick="location.href='WriteForm2.jsp?year=<%=year%>&month=<%=month%>&date=<%=date%>&email=<%=email%>'">
 										<%
 											out.println("<font color=" + fc + ">" + date + "</font></td>");
 												} else {
 										%>
 									
 									<td align='center' bgcolor=" #ffffff "
-										onclick="location.href='WriteForm2.jsp?year=<%=year%>&month=<%=month%>&date=<%=date%>'">
+										onclick="location.href='WriteForm2.jsp?year=<%=year%>&month=<%=month%>&date=<%=date%>&email=<%=email%>'">
 										<%
 											out.println("<font color=" + fc + ">" + date + "</font></td>");
 												}
