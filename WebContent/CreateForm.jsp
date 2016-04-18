@@ -64,8 +64,7 @@
 		<p id="u197-7">Present by team SUMIT</p>
 	</div>
 	<form name="frm" onsubmit="return chk(n)">
-		<div id="createForm2">
-			<table>
+			<table id="tableCenter">
 				<tr>
 				<td>E-mail</td>
 				<td><input type="email" name="email" required="required"
@@ -105,7 +104,6 @@
 					<td><button onclick="location.href='Cover.jsp'">돌아가기</button></td>
 				</tr>
 			</table>
-		</div>
 	</form>
 </body>
 
