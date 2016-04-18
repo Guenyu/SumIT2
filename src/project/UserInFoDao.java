@@ -166,4 +166,22 @@ public class UserInFoDao {
 	      }
 	      return result;
 	   }
+	public int IDCheck(String ID) throws SQLException {
+		int result = 0; Connection conn = null;
+		PreparedStatement pstmt = null; ResultSet rs = null;
+		String sql = "select ID from UserInFo where ID = ?";
+		try {
+			conn = getConnection();
+			pstmt  = conn.prepareStatement(sql);
+			pstmt.setString(1, ID);
+			rs = pstmt.executeQuery();
+			if (rs.next()) result = 1; 
+		}catch(Exception e) {System.out.println(e.getMessage());
+		}finally {
+			if (rs != null) rs.close();
+			if (pstmt != null) pstmt.close();
+			if (conn != null) conn.close();
+		}
+		return result;
+	}
 }

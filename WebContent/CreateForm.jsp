@@ -7,14 +7,42 @@
 <title>Insert title here</title>
 <link type="text/css" rel="stylesheet" href="comm.css">
 <script type="text/javascript">
-	function chk(n) {
-		if (n == 1) {
-			frm.action = "CreatePro.jsp";
+	function chk() {
+		if (frm.ID.length < 5) {
+			alert("아이디는 5자리 이상 15자리 이하로 입력하세요.");
+			frm.ID.focus();
+			frm.ID.value = "";
 		}
-		/* 		if (n==2){
-		 frm.action = ("Daum.jsp");
-		 } */
-		return true;
+		if (isNaN(frm.phone.value)) {
+			alert("전화 번호는 숫자로 입력하세요.");
+			frm.phone.focus();
+			frm.phone.value = "";
+		}
+		if (frm.password.value != frm.VarifyingPassword.value) {
+			alert("암호를 맞춰주세요.");
+			frm.VarifyingPassword.focus();
+			frm.VarifyingPassword.value = "";
+		}
+		if (frm.password.length < 8) {
+			alert("암호는 8자리 이상 20자리 이하로 입력하세요.");
+			frm.password.focus();
+			frm.password.value = "";
+		}
+		if (isNaN(frm.phone.value)) {
+			alert("전화 번호는 숫자로 입력하세요.");
+			frm.phone.focus();
+			frm.phone.value = "";
+		}
+		 else
+			action = "CreatePro.jsp"
+	}
+	function Emailcheck() {
+		window.open("Emailcheck.jsp?email=" + frm.email.value, "",
+				"width=300 height = 300");
+	}
+	function IDCheck() {
+		window.open("IDCheck.jsp?ID=" + frm.ID.value, "",
+				"width=300 height = 300");
 	}
 </script>
 </head>
@@ -40,7 +68,7 @@
 					<td><input type="email" name="email" required="required"
 						maxlength="30" placeholder="E-Mail"></td>
 					<td>&nbsp; <input type="button" value="Redundancy check"
-						onclick="emailcheck()" required="required"></td>
+						onclick="Emailcheck()" required="required"></td>
 				</tr>
 				<tr>
 					<td>아이디</td>
