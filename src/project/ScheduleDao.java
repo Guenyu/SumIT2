@@ -53,17 +53,17 @@ public class ScheduleDao {
 	public int insert(Schedule user) throws SQLException{
 		int result=0; Connection conn=null;
 		PreparedStatement pstmt=null;
-		String sql="insert into Schedule values(?,?,?,?,?,?)";
-//		String sql="insert into Schedule values((Select seq+1 from(Select seq from Schedule Order By seq Desc)Where RowNum <=1),?,?,?,?,?)";
+//		String sql="insert into Schedule values(?,?,?,?,?,?)";
+		String sql="insert into Schedule values((Select seq+1 from(Select seq from Schedule Order By seq Desc)Where RowNum <=1),?,?,?,?,?)";
 		try {
 			conn=getConnection();
 			pstmt=conn.prepareStatement(sql);
-			pstmt.setInt(1,user.getSeq());
-			pstmt.setString(2, user.getTitle());
-			pstmt.setString(3, user.getContent());
-			pstmt.setString(4, user.getWriter());
-			pstmt.setString(5, user.getReg_date1());
-			pstmt.setString(6, user.getReg_date2());
+//			pstmt.setInt(1,user.getSeq());
+			pstmt.setString(1, user.getTitle());
+			pstmt.setString(2, user.getContent());
+			pstmt.setString(3, user.getWriter());
+			pstmt.setString(4, user.getReg_date1());
+			pstmt.setString(5, user.getReg_date2());
 			result=pstmt.executeUpdate();
 			
 		} catch (Exception e) {
