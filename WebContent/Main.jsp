@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ include file="sessionChk.jsp" %>
+<%@ include file="sessionChk.jsp"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -23,11 +23,14 @@
 	month = now.get(Calendar.MONTH) + 1;
 	int end = now.getActualMaximum(Calendar.DAY_OF_MONTH); //해당월의 마지막 날짜
 	int w = now.get(Calendar.DAY_OF_WEEK); //1~7(일~토)
-	email=request.getParameter("email");
+	email = request.getParameter("email");
 	int date = 0;
 %>
 <style type="text/css">
-* { padding: 0px; margin: 0px; } /* 브라우저별 기본 여백 차이가 있기에 작성한다. */
+* {
+	padding: 0px;
+	margin: 0px;
+} /* 브라우저별 기본 여백 차이가 있기에 작성한다. */
 a {
 	cusor: pointer;
 	color: #000000;
@@ -113,43 +116,43 @@ a:HOVER, a:ACTIVE {
 		cellpadding="0">
 		<tr align="center">
 			<td style="font-size: 16; font-weight: bold; padding-left: 10;"
-				align="left"><%=email%>님 환영합니다. <input type="button" name="logout"
-				value="로그아웃"> <input type="text"
-				style="width: 120; height: 20; border: 1px solid #aaaaaa;">
-				<input type="button" name="검색" value="검색">
-			</td>
+				align="left"><%=email%>님 환영합니다.
+				<input type="button" name="logout" value="로그아웃" onclick="location.href='Logout.jsp'">
+				<input type="text" style="width: 120; height: 20; border: 1px solid #aaaaaa;">
+				<input type="button" name="검색" value="검색"></td>
 		</tr>
 		<tr align="center">
 			<td>
 				<table width="100%" border="1" cellspacing="0" cellpadding="0">
 					<tr>
 						<td width="15%" valign="top" id="leftmenutd" align="center">
-							<input type="submit" name="일정" value="일정쓰기" onclick="location.href='WriteForm.jsp?email=<%=email%>'">
-							<input type="button" name="페이지" value="마이페이지" onclick="location.href='Mypage.jsp?email=<%=email%>'"><br><br>
-							<div style='cursor:pointer'>
-								<span onclick="before_month();">◀</span>
-								<span id="select_year">2016</span>년
-								<span id="select_month">1</span> 월 
-								<span onclick="after_month();">▶</span>
+							<input type="submit" name="일정" value="일정쓰기"
+							onclick="location.href='WriteForm.jsp?email=<%=email%>'">
+							<input type="button" name="페이지" value="마이페이지"
+							onclick="location.href='Mypage.jsp?email=<%=email%>'"><br>
+						<br>
+							<div style='cursor: pointer'>
+								<span onclick="before_month();">◀</span> <span id="select_year">2016</span>년
+								<span id="select_month">1</span> 월 <span
+									onclick="after_month();">▶</span>
 								<p>
 								<div id='test'></div>
 							</div>
 						</td>
-						<td width="85%">
-							<br />&nbsp;<br />
+						<td width="85%"><br />&nbsp;<br />
 
 							<center>
 								<table width="210" border="0" cellpadding="1" cellspacing="2">
 									<tr height="30">
-										<td align="center">
-										<a href="Main.jsp?year=<%=year%>&month=<%=month - 1%>&email=<%=email %>">◀</a>
-										<b><%=year%>년  <%=month%>월</b>
-										<a href="Main.jsp?year=<%=year%>&month=<%=month + 1%>&email=<%=email %>">▶</a></td>
+										<td align="center"><a
+											href="Main.jsp?year=<%=year%>&month=<%=month - 1%>&email=<%=email%>">◀</a>
+											<b><%=year%>년 <%=month%>월</b> <a
+											href="Main.jsp?year=<%=year%>&month=<%=month + 1%>&email=<%=email%>">▶</a></td>
 									</tr>
 								</table>
 
 								<table width="210" border="0" cellpadding="2" cellspacing="1"
-									bgcolor="#cccccc" style='cursor:pointer'>
+									bgcolor="#cccccc" style='cursor: pointer'>
 									<tr height="25">
 										<td align="center" bgcolor="#e6e4e6"><font color="red">일</font></td>
 										<td align="center" bgcolor="#e6e4e6">월</td>
@@ -210,9 +213,9 @@ a:HOVER, a:ACTIVE {
 											}
 											out.println("</tr>");
 										%>
+									
 								</table>
-							</center>
-						</td>
+							</center></td>
 					</tr>
 				</table>
 			</td>
