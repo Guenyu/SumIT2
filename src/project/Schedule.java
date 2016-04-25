@@ -3,24 +3,24 @@ package project;
 import java.sql.Date;
 
 public class Schedule {
+	private int seq;
+	private String title;
 	private String writer; 
 	private String content;
-	private String title;
-	private int seq; 
-	private String reg_date1;
-	private String reg_date2;
-	
-	public String getReg_date1() {
-		return reg_date1;
+	private String reg_day;
+	private String add_date;
+	private Date reg_date;
+	public int getSeq() {
+		return seq;
 	}
-	public void setReg_date1(String reg_date1) {
-		this.reg_date1 = reg_date1;
+	public void setSeq(int seq) {
+		this.seq = seq;
 	}
-	public String getReg_date2() {
-		return reg_date2;
+	public String getTitle() {
+		return title;
 	}
-	public void setReg_date2(String reg_date2) {
-		this.reg_date2 = reg_date2;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	public String getWriter() {
 		return writer;
@@ -34,16 +34,25 @@ public class Schedule {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getTitle() {
-		return title;
+	public Date getReg_date() {
+		return reg_date;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	public void setReg_date(Date reg_date) {
+		this.reg_date = reg_date;
 	}
-	public int getSeq() {
-		return seq;
+	public String getReg_day() {
+		return reg_day;
 	}
-	public void setSeq(int seq) {
-		this.seq = seq;
+	public void setReg_day(String reg_day) {
+		this.reg_day = reg_day;
 	}
+	
+	public String getAdd_date() {
+		return add_date;
+	}
+	public void setAdd_date(String add_date) {
+		this.add_date = add_date;
+	}
+	
 }
+
