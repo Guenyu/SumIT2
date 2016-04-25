@@ -6,7 +6,6 @@ import java.util.Date;
 import javax.sql.*;
 import javax.naming.*;
 
-
 public class ScheduleDao {
 	private static ScheduleDao instance; // = new MemberDao();
 	private ScheduleDao() {}
@@ -27,7 +26,7 @@ public class ScheduleDao {
 		return conn;
 	}
 	
-	//월 데이타 리스트
+	//�썡 �뜲�씠�� 由ъ뒪�듃
 	public List<Schedule> selectList(String id, String Sdate, String Edate) throws SQLException {
 		Connection conn = null;
 		PreparedStatement pstmt = null; ResultSet rs = null;
@@ -58,7 +57,7 @@ public class ScheduleDao {
 		return list;
 	}
 	
-	//일정등록
+	//�씪�젙�벑濡�
 	public int insert(Schedule user) throws SQLException{
 		int result=0; 
 		Connection conn=null;
@@ -94,7 +93,7 @@ public class ScheduleDao {
 		return result;
 	}
 	
-	//상세보기
+	//�긽�꽭蹂닿린
 	public Schedule selectInfo(int seq) throws SQLException {
 		Connection conn = null;
 		PreparedStatement pstmt = null; ResultSet rs = null;

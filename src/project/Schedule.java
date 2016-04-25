@@ -1,7 +1,6 @@
 package project;
 
 import java.sql.Date;
-
 public class Schedule {
 	private int seq;
 	private String title;

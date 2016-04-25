@@ -4,10 +4,11 @@ import java.sql.*;
 import javax.naming.*;
 import javax.sql.*;
 
+
 public class UserInFoDao {
 	private static UserInFoDao instance; // = new MemberDao();
 	private UserInFoDao() {}
-	public static UserInFoDao getInstance() {//占싱깍옙占쏙옙 占쏙옙占쏙옙,占싱깍옙占쏙옙 占쏙옙占싹몌옙 占쏙옙체占쏙옙 占쏙옙占� 호占쏙옙
+	public static UserInFoDao getInstance() {//�뜝�떛源띿삕�뜝�룞�삕 �뜝�룞�삕�뜝�룞�삕,�뜝�떛源띿삕�뜝�룞�삕 �뜝�룞�삕�뜝�떦紐뚯삕 �뜝�룞�삕泥닷뜝�룞�삕 �뜝�룞�삕�뜝占� �샇�뜝�룞�삕
 		if(instance==null) instance=new UserInFoDao();
 		return instance;
 	}
@@ -86,7 +87,7 @@ public class UserInFoDao {
 				ui.setPassword(rs.getString("password"));
 				ui.setPhone(rs.getString("phone"));
 				ui.setName(rs.getString("name"));
-			} else System.out.println("�뾾�꽕");
+			} else System.out.println("占쎈씨占쎄퐬");
 			System.out.println("name ="+ui.getName());
 		} catch(Exception e) {
 			System.out.println(e.getMessage());
