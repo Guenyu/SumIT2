@@ -136,9 +136,9 @@
 		cellpadding="0">
 		<tr align="center">
 			<td style="font-size: 16; font-weight: bold; padding-left: 10;"
-				align="left"><%=email%>님 환영합니다. <input type="button" name="logout"
-				value="로그아웃"> <input type="text"
-				style="width: 120; height: 20; border: 1px solid #aaaaaa;">
+				align="left"><%=email%>님 환영합니다.
+				<input type="button" name="logout" value="로그아웃" onclick="location.href='Logout.jsp'">
+				<input type="text" style="width: 120; height: 20; border: 1px solid #aaaaaa;">
 				<input type="button" name="검색" value="검색">
 			</td>
 		</tr>
